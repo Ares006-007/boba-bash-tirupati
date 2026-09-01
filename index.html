@@ -15,245 +15,369 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- ============ HEADER ============ -->
   <header class="site-header" id="site-header">
-    <div class="header-inner">
+    <div class="container header-inner">
       <a href="#" class="header-logo" aria-label="Boba Bash Home">
         <span class="header-logo-text font-display"><span class="logo-boba">boba</span> <span class="logo-bash">bash</span></span>
-        <img src="https://boba-bash-brand.vercel.app/pics/cup.png" alt="" class="header-cup" width="28" height="28">
+        <img src="https://boba-bash-brand.vercel.app/pics/cup.png" alt="" class="header-cup" width="26" height="26">
       </a>
       <span class="header-pill font-display">TIRUPATI &bull; 2026</span>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero" id="hero">
-    <div class="hero-inner">
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="container hero-outer">
+        <div class="hero-inner">
 
-      <!-- Blue accent circles -->
-      <div class="accent-circle accent-circle-tr" aria-hidden="true"></div>
-      <div class="accent-circle accent-circle-br" aria-hidden="true"></div>
+          <!-- Accent circles -->
+          <div class="accent accent-top-right" aria-hidden="true"></div>
+          <div class="accent accent-bottom-right" aria-hidden="true"></div>
+          <div class="accent accent-bottom-left" aria-hidden="true"></div>
 
-      <!-- Tirupati silhouette artwork -->
-      <div class="hero-silhouettes" aria-hidden="true">
-        <svg class="silhouette-svg" viewBox="0 0 960 560" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
-          <!-- Sun with rays -->
-          <circle cx="620" cy="90" r="30" fill="#f2c14e" opacity="0.35"/>
-          <line x1="620" y1="48" x2="620" y2="38" stroke="#f2c14e" stroke-width="2.5" opacity="0.25"/>
-          <line x1="620" y1="132" x2="620" y2="142" stroke="#f2c14e" stroke-width="2.5" opacity="0.25"/>
-          <line x1="578" y1="90" x2="568" y2="90" stroke="#f2c14e" stroke-width="2.5" opacity="0.25"/>
-          <line x1="662" y1="90" x2="672" y2="90" stroke="#f2c14e" stroke-width="2.5" opacity="0.25"/>
-          <line x1="590" y1="60" x2="583" y2="53" stroke="#f2c14e" stroke-width="2.5" opacity="0.25"/>
-          <line x1="650" y1="120" x2="657" y2="127" stroke="#f2c14e" stroke-width="2.5" opacity="0.25"/>
-          <line x1="590" y1="120" x2="583" y2="127" stroke="#f2c14e" stroke-width="2.5" opacity="0.25"/>
-          <line x1="650" y1="60" x2="657" y2="53" stroke="#f2c14e" stroke-width="2.5" opacity="0.25"/>
+          <!-- Halftone overlay -->
+          <div class="halftone-overlay" aria-hidden="true"></div>
 
-          <!-- Moon crescent (top right) -->
-          <circle cx="870" cy="70" r="18" fill="#274156" opacity="0.18"/>
-          <circle cx="878" cy="64" r="14" fill="#6fbbe2" opacity="0.25"/>
-          <!-- Stars near moon -->
-          <circle cx="840" cy="55" r="2" fill="#274156" opacity="0.15"/>
-          <circle cx="900" cy="90" r="1.5" fill="#274156" opacity="0.12"/>
+          <!-- Tirupati silhouette landscape -->
+          <div class="hero-landscape" aria-hidden="true">
+            <svg viewBox="0 0 960 560" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
 
-          <!-- Tirupati Hills (rolling) -->
-          <path d="M0 560 L0 380 Q50 330 120 355 Q180 310 260 340 Q320 300 400 330 Q470 290 550 320 Q620 290 700 320 Q780 300 850 330 Q920 350 960 360 L960 560 Z" fill="#274156" opacity="0.12"/>
+              <!-- === SKY === -->
+              <!-- Sun with rays -->
+              <circle cx="630" cy="88" r="28" fill="#f2c14e" opacity="0.30"/>
+              <g stroke="#f2c14e" stroke-width="2" opacity="0.20" stroke-linecap="round">
+                <line x1="630" y1="50" x2="630" y2="40"/>
+                <line x1="630" y1="126" x2="630" y2="136"/>
+                <line x1="592" y1="88" x2="582" y2="88"/>
+                <line x1="668" y1="88" x2="678" y2="88"/>
+                <line x1="603" y1="61" x2="596" y2="54"/>
+                <line x1="657" y1="115" x2="664" y2="122"/>
+                <line x1="603" y1="115" x2="596" y2="122"/>
+                <line x1="657" y1="61" x2="664" y2="54"/>
+              </g>
 
-          <!-- Main Temple Tower (Gopuram) — center-right, prominent -->
-          <path d="M480 340 L480 180 L488 160 L493 140 L496 120 L498 100 L500 90 L502 100 L504 120 L507 140 L512 160 L520 180 L520 340 Z" fill="#274156" opacity="0.15"/>
-          <!-- Temple tiers -->
-          <rect x="475" y="200" width="50" height="6" rx="2" fill="#274156" opacity="0.12"/>
-          <rect x="478" y="185" width="44" height="5" rx="2" fill="#274156" opacity="0.12"/>
-          <rect x="481" y="170" width="38" height="4" rx="2" fill="#274156" opacity="0.12"/>
-          <rect x="484" y="155" width="32" height="4" rx="2" fill="#274156" opacity="0.12"/>
-          <rect x="487" y="142" width="26" height="3" rx="2" fill="#274156" opacity="0.12"/>
-          <!-- Temple base -->
-          <rect x="465" y="340" width="70" height="30" rx="2" fill="#274156" opacity="0.1"/>
-          <!-- Temple pillars -->
-          <rect x="475" y="310" width="4" height="30" fill="#274156" opacity="0.08"/>
-          <rect x="488" y="310" width="4" height="30" fill="#274156" opacity="0.08"/>
-          <rect x="508" y="310" width="4" height="30" fill="#274156" opacity="0.08"/>
-          <rect x="518" y="310" width="4" height="30" fill="#274156" opacity="0.08"/>
+              <!-- Crescent moon -->
+              <circle cx="875" cy="62" r="16" fill="#274156" opacity="0.16"/>
+              <circle cx="882" cy="57" r="12.5" fill="#79c4e0" opacity="0.22"/>
+              <!-- Stars -->
+              <circle cx="845" cy="48" r="1.8" fill="#274156" opacity="0.12"/>
+              <circle cx="905" cy="78" r="1.3" fill="#274156" opacity="0.10"/>
+              <circle cx="830" cy="80" r="1" fill="#274156" opacity="0.08"/>
 
-          <!-- Second smaller temple (far left) -->
-          <path d="M100 370 L100 260 L106 245 L109 230 L111 220 L113 230 L116 245 L122 260 L122 370 Z" fill="#274156" opacity="0.1"/>
-          <rect x="95" y="280" width="32" height="4" rx="1" fill="#274156" opacity="0.08"/>
-          <rect x="97" y="268" width="28" height="3" rx="1" fill="#274156" opacity="0.08"/>
+              <!-- Birds -->
+              <g stroke="#274156" stroke-width="1.5" fill="none" opacity="0.08" stroke-linecap="round">
+                <path d="M250 100 Q255 94 260 100 Q265 94 270 100"/>
+                <path d="M310 75 Q314 70 318 75 Q322 70 326 75"/>
+                <path d="M420 55 Q423 51 426 55 Q429 51 432 55"/>
+                <path d="M780 95 Q783 90 786 95 Q789 90 792 95"/>
+                <path d="M550 70 Q553 66 556 70 Q559 66 562 70"/>
+              </g>
 
-          <!-- Dome structure (far right) -->
-          <path d="M800 360 Q800 310 825 300 Q850 310 850 360 Z" fill="#274156" opacity="0.1"/>
-          <rect x="795" y="360" width="60" height="15" rx="2" fill="#274156" opacity="0.08"/>
+              <!-- === ARCHITECTURE === -->
+              <!-- Main Gopuram (Tirumala-inspired) — center-right -->
+              <g opacity="0.14">
+                <!-- Base platform -->
+                <rect x="460" y="345" width="82" height="18" rx="2" fill="#274156"/>
+                <!-- Entrance arch -->
+                <path d="M477 345 L477 318 Q500 306 523 318 L523 345 Z" fill="#274156"/>
+                <!-- Tier 1 -->
+                <rect x="466" y="296" width="70" height="22" rx="1" fill="#274156"/>
+                <!-- Tier 2 -->
+                <rect x="470" y="274" width="62" height="22" rx="1" fill="#274156"/>
+                <!-- Tier 3 -->
+                <rect x="474" y="254" width="54" height="20" rx="1" fill="#274156"/>
+                <!-- Tier 4 -->
+                <rect x="478" y="236" width="46" height="18" rx="1" fill="#274156"/>
+                <!-- Tier 5 -->
+                <rect x="482" y="220" width="38" height="16" rx="1" fill="#274156"/>
+                <!-- Tier 6 -->
+                <rect x="486" y="206" width="30" height="14" rx="1" fill="#274156"/>
+                <!-- Top barrel vault -->
+                <path d="M490 206 L490 185 Q500 172 510 185 L510 206 Z" fill="#274156"/>
+                <!-- Kalasam finial -->
+                <circle cx="500" cy="176" r="3.5" fill="#274156"/>
+                <line x1="500" y1="173" x2="500" y2="164" stroke="#274156" stroke-width="2"/>
+              </g>
 
-          <!-- Trees -->
-          <ellipse cx="60" cy="370" rx="28" ry="36" fill="#274156" opacity="0.1"/>
-          <rect x="57" y="390" width="6" height="22" fill="#274156" opacity="0.08"/>
-          <ellipse cx="200" cy="360" rx="20" ry="28" fill="#274156" opacity="0.08"/>
-          <rect x="197" y="375" width="5" height="18" fill="#274156" opacity="0.07"/>
-          <ellipse cx="350" cy="355" rx="24" ry="30" fill="#274156" opacity="0.08"/>
-          <rect x="347" y="372" width="6" height="20" fill="#274156" opacity="0.07"/>
-          <ellipse cx="750" cy="350" rx="22" ry="28" fill="#274156" opacity="0.08"/>
-          <rect x="748" y="368" width="5" height="18" fill="#274156" opacity="0.07"/>
-          <ellipse cx="920" cy="355" rx="26" ry="32" fill="#274156" opacity="0.09"/>
-          <rect x="917" y="372" width="6" height="20" fill="#274156" opacity="0.07"/>
+              <!-- Secondary smaller temple (left side) -->
+              <g opacity="0.10">
+                <rect x="90" y="355" width="44" height="14" rx="2" fill="#274156"/>
+                <path d="M97 355 L97 295 L103 280 L107 268 L109 260 L111 268 L115 280 L121 295 L121 355 Z" fill="#274156"/>
+                <rect x="93" y="310" width="32" height="4" rx="1" fill="#274156"/>
+                <rect x="95" y="298" width="28" height="3" rx="1" fill="#274156"/>
+                <rect x="97" y="286" width="24" height="3" rx="1" fill="#274156"/>
+                <circle cx="109" cy="264" r="3" fill="#274156"/>
+              </g>
 
-          <!-- Waterfall (right side) -->
-          <path d="M880 260 L880 200 L890 200 L890 260 Z" fill="#274156" opacity="0.08"/>
-          <path d="M878 260 Q882 280 877 300 Q883 320 879 340 L885 340 Q882 320 886 300 Q881 280 886 260 Z" fill="#274156" opacity="0.07"/>
-          <!-- Waterfall rocks -->
-          <ellipse cx="883" cy="195" rx="15" ry="8" fill="#274156" opacity="0.08"/>
+              <!-- Dome/Mandapa structure (far right) -->
+              <g opacity="0.09">
+                <path d="M795 365 Q795 320 822 310 Q850 320 850 365 Z" fill="#274156"/>
+                <rect x="790" y="365" width="65" height="12" rx="2" fill="#274156"/>
+                <rect x="800" y="340" width="4" height="25" fill="#274156"/>
+                <rect x="840" y="340" width="4" height="25" fill="#274156"/>
+              </g>
 
-          <!-- Elephant silhouettes (bottom) -->
-          <g transform="translate(300, 440)" opacity="0.1">
-            <ellipse cx="25" cy="18" rx="24" ry="16" fill="#274156"/>
-            <circle cx="4" cy="8" r="9" fill="#274156"/>
-            <path d="M-4 8 Q-10 24 -6 40 L-1 40 Q1 26 3 14" fill="#274156"/>
-            <rect x="8" y="32" width="5" height="16" rx="2" fill="#274156"/>
-            <rect x="18" y="32" width="5" height="16" rx="2" fill="#274156"/>
-            <rect x="32" y="32" width="5" height="16" rx="2" fill="#274156"/>
-            <rect x="42" y="32" width="5" height="16" rx="2" fill="#274156"/>
-          </g>
-          <!-- Second elephant (smaller, farther) -->
-          <g transform="translate(380, 455) scale(0.7)" opacity="0.07">
-            <ellipse cx="25" cy="18" rx="24" ry="16" fill="#274156"/>
-            <circle cx="4" cy="8" r="9" fill="#274156"/>
-            <path d="M-4 8 Q-10 24 -6 40 L-1 40 Q1 26 3 14" fill="#274156"/>
-            <rect x="8" y="32" width="5" height="16" rx="2" fill="#274156"/>
-            <rect x="18" y="32" width="5" height="16" rx="2" fill="#274156"/>
-            <rect x="32" y="32" width="5" height="16" rx="2" fill="#274156"/>
-            <rect x="42" y="32" width="5" height="16" rx="2" fill="#274156"/>
-          </g>
-        </svg>
+              <!-- === NATURE === -->
+              <!-- Background hills (far, gentle) -->
+              <path d="M0 560 L0 410 Q60 370 150 388 Q230 350 330 375 Q400 345 480 365 Q560 340 650 360 Q730 340 810 365 Q880 355 960 370 L960 560 Z" fill="#274156" opacity="0.08"/>
+              <!-- Foreground hills (closer, stronger) -->
+              <path d="M0 560 L0 440 Q80 405 170 420 Q260 395 360 415 Q440 390 530 410 Q620 392 710 412 Q800 395 880 415 Q940 425 960 430 L960 560 Z" fill="#274156" opacity="0.11"/>
+
+              <!-- Trees -->
+              <g fill="#274156">
+                <!-- Tree cluster left -->
+                <ellipse cx="55" cy="408" rx="26" ry="34" opacity="0.10"/>
+                <rect x="52" y="430" width="6" height="20" rx="1" opacity="0.08"/>
+                <ellipse cx="30" cy="418" rx="18" ry="24" opacity="0.07"/>
+
+                <!-- Trees mid-left -->
+                <ellipse cx="210" cy="400" rx="20" ry="28" opacity="0.08"/>
+                <rect x="208" y="418" width="5" height="16" rx="1" opacity="0.06"/>
+                <ellipse cx="240" cy="406" rx="14" ry="20" opacity="0.06"/>
+
+                <!-- Tree mid -->
+                <ellipse cx="360" cy="396" rx="22" ry="28" opacity="0.07"/>
+                <rect x="358" y="414" width="5" height="18" rx="1" opacity="0.06"/>
+
+                <!-- Trees right-of-temple -->
+                <ellipse cx="565" cy="398" rx="18" ry="24" opacity="0.07"/>
+                <rect x="563" y="414" width="4" height="14" rx="1" opacity="0.05"/>
+
+                <!-- Trees far right -->
+                <ellipse cx="750" cy="392" rx="20" ry="26" opacity="0.08"/>
+                <rect x="748" y="410" width="5" height="16" rx="1" opacity="0.06"/>
+                <ellipse cx="920" cy="398" rx="24" ry="30" opacity="0.09"/>
+                <rect x="918" y="418" width="5" height="18" rx="1" opacity="0.07"/>
+              </g>
+
+              <!-- Waterfall -->
+              <g fill="#274156" opacity="0.07">
+                <ellipse cx="882" cy="280" rx="14" ry="7"/>
+                <rect x="877" y="285" width="10" height="60" rx="2"/>
+                <path d="M875 345 Q880 370 876 395 L884 395 Q881 370 885 345 Z"/>
+              </g>
+
+              <!-- Elephants -->
+              <g transform="translate(280, 460)" opacity="0.09">
+                <ellipse cx="25" cy="16" rx="22" ry="14" fill="#274156"/>
+                <circle cx="5" cy="7" r="8" fill="#274156"/>
+                <path d="M-2 7 Q-8 20 -5 34 L0 34 Q1 22 3 12" fill="#274156"/>
+                <rect x="9" y="28" width="5" height="14" rx="2" fill="#274156"/>
+                <rect x="18" y="28" width="5" height="14" rx="2" fill="#274156"/>
+                <rect x="30" y="28" width="5" height="14" rx="2" fill="#274156"/>
+                <rect x="39" y="28" width="5" height="14" rx="2" fill="#274156"/>
+                <path d="M48 18 Q52 20 48 26" stroke="#274156" stroke-width="2" fill="none"/>
+              </g>
+              <!-- Baby elephant -->
+              <g transform="translate(345, 475) scale(0.6)" opacity="0.07">
+                <ellipse cx="25" cy="16" rx="22" ry="14" fill="#274156"/>
+                <circle cx="5" cy="7" r="8" fill="#274156"/>
+                <path d="M-2 7 Q-8 20 -5 34 L0 34 Q1 22 3 12" fill="#274156"/>
+                <rect x="9" y="28" width="5" height="14" rx="2" fill="#274156"/>
+                <rect x="18" y="28" width="5" height="14" rx="2" fill="#274156"/>
+                <rect x="30" y="28" width="5" height="14" rx="2" fill="#274156"/>
+                <rect x="39" y="28" width="5" height="14" rx="2" fill="#274156"/>
+              </g>
+
+              <!-- Deer / cheetah silhouette -->
+              <g transform="translate(680, 470)" opacity="0.06">
+                <ellipse cx="18" cy="8" rx="18" ry="7" fill="#274156"/>
+                <circle cx="0" cy="3" r="5" fill="#274156"/>
+                <rect x="6" y="14" width="3" height="12" rx="1" fill="#274156"/>
+                <rect x="14" y="14" width="3" height="12" rx="1" fill="#274156"/>
+                <rect x="24" y="14" width="3" height="12" rx="1" fill="#274156"/>
+                <rect x="30" y="14" width="3" height="12" rx="1" fill="#274156"/>
+                <path d="M36 8 Q48 5 52 10" stroke="#274156" stroke-width="1.5" fill="none"/>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Hero content -->
+          <div class="hero-content">
+            <div class="hero-badge reveal">
+              <img src="https://boba-bash-brand.vercel.app/pics/cup.png" alt="" class="badge-cup" width="18" height="18">
+              <span class="badge-text font-body">THE BOBA BASH IS COMING</span>
+            </div>
+
+            <h1 class="hero-title font-display reveal" style="--delay:.05s">
+              <span class="title-boba">Boba</span>
+              <span class="title-bash">Bash</span>
+            </h1>
+
+            <p class="hero-city font-display reveal" style="--delay:.1s">TIRUPATI</p>
+
+            <p class="hero-desc font-body reveal" style="--delay:.15s">
+              <span class="yellow-dot" aria-hidden="true"></span>
+              Get ready for a day packed with boba, people, creativity and unforgettable moments. Tirupati, we're bringing the Boba Bash to you!
+            </p>
+          </div>
+
+          <!-- Boba cup -->
+          <div class="hero-cup-wrap">
+            <img src="https://boba-bash-brand.vercel.app/pics/cup.png"
+                 alt="Large illustrated Boba Bash cup with orange milk tea, tapioca pearls, blue lid and straw"
+                 class="hero-cup-img"
+                 width="320" height="320">
+          </div>
+
+        </div>
       </div>
+    </section>
 
-      <div class="hero-content">
-        <!-- Badge -->
-        <div class="hero-badge">
-          <img src="https://boba-bash-brand.vercel.app/pics/cup.png" alt="" class="badge-cup" width="20" height="20">
-          <span class="badge-text font-body">THE BOBA BASH IS COMING</span>
+    <!-- ============ INFO CARDS ============ -->
+    <section class="info-cards" id="info-cards">
+      <div class="container cards-grid">
+
+        <div class="info-card reveal" style="--delay:0s">
+          <div class="card-bg" aria-hidden="true">
+            <svg viewBox="0 0 300 180" fill="none" preserveAspectRatio="xMidYMax slice">
+              <path d="M0 180 L0 140 Q40 115 100 130 Q160 110 220 125 Q260 115 300 130 L300 180 Z" fill="#3d2b18" opacity="0.05"/>
+              <circle cx="255" cy="30" r="16" fill="#3d2b18" opacity="0.05"/>
+            </svg>
+          </div>
+          <div class="card-icon-ring">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="17" rx="2" stroke="currentColor" stroke-width="1.8"/>
+              <line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1.8"/>
+              <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <rect x="7" y="12" width="3" height="3" rx=".5" fill="currentColor"/>
+              <rect x="11" y="12" width="3" height="3" rx=".5" fill="currentColor" opacity=".5"/>
+              <rect x="7" y="16" width="3" height="3" rx=".5" fill="currentColor" opacity=".5"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <span class="card-label font-body">WHEN</span>
+            <span class="card-value font-display">21 September<br>2026</span>
+          </div>
         </div>
 
-        <!-- Title -->
-        <h1 class="hero-title font-display">
-          <span class="title-boba">Boba</span>
-          <span class="title-bash">Bash</span>
-        </h1>
-        <p class="hero-city font-display">TIRUPATI</p>
-
-        <!-- Description -->
-        <p class="hero-desc font-body">
-          <span class="yellow-dot" aria-hidden="true"></span>
-          Get ready for a day packed with boba, people, creativity and unforgettable moments. Tirupati, we're bringing the Boba Bash to you!
-        </p>
-      </div>
-
-      <!-- Real Boba Cup -->
-      <div class="hero-cup-wrapper">
-        <img src="https://boba-bash-brand.vercel.app/pics/cup.png" alt="Boba Bash Cup" class="hero-cup-img">
-      </div>
-    </div>
-  </section>
-
-  <!-- Event Info Cards -->
-  <section class="info-cards" id="info-cards">
-    <div class="info-cards-inner">
-
-      <!-- Card 1: When -->
-      <div class="info-card">
-        <div class="card-icon-wrap">
-          <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="4" width="18" height="17" rx="2" stroke="currentColor" stroke-width="1.8"/>
-            <line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1.8"/>
-            <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <rect x="7" y="12" width="3" height="3" rx="0.5" fill="currentColor"/>
-            <rect x="11" y="12" width="3" height="3" rx="0.5" fill="currentColor" opacity="0.5"/>
-            <rect x="7" y="16" width="3" height="3" rx="0.5" fill="currentColor" opacity="0.5"/>
-          </svg>
+        <div class="info-card reveal" style="--delay:.08s">
+          <div class="card-bg" aria-hidden="true">
+            <svg viewBox="0 0 300 180" fill="none" preserveAspectRatio="xMidYMax slice">
+              <path d="M220 180 L220 110 L227 96 L231 82 L233 74 L235 82 L239 96 L246 110 L246 180 Z" fill="#3d2b18" opacity="0.06"/>
+              <rect x="216" y="125" width="34" height="4" rx="1" fill="#3d2b18" opacity="0.04"/>
+              <rect x="218" y="113" width="30" height="3" rx="1" fill="#3d2b18" opacity="0.04"/>
+            </svg>
+          </div>
+          <div class="card-icon-ring card-icon-ring--green">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="12" cy="9" r="2.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <span class="card-label font-body">WHERE</span>
+            <span class="card-value font-display">Mohan Babu<br>University</span>
+          </div>
         </div>
-        <div class="card-text">
-          <span class="card-label font-body">WHEN</span>
-          <span class="card-value font-display">21 September<br>2026</span>
+
+        <div class="info-card reveal" style="--delay:.16s">
+          <div class="card-bg card-bg--rich" aria-hidden="true">
+            <svg viewBox="0 0 300 180" fill="none" preserveAspectRatio="xMidYMax slice">
+              <!-- Hills -->
+              <path d="M0 180 L0 135 Q40 110 90 125 Q140 105 190 120 Q240 110 300 125 L300 180 Z" fill="#3d2b18" opacity="0.07"/>
+              <!-- Elephants -->
+              <g transform="translate(30,140)" opacity="0.07">
+                <ellipse cx="18" cy="12" rx="16" ry="10" fill="#3d2b18"/>
+                <circle cx="4" cy="5" r="6" fill="#3d2b18"/>
+                <path d="M-1 5 Q-5 14 -3 24 L1 24 Q1 16 2 9" fill="#3d2b18"/>
+                <rect x="7" y="20" width="4" height="10" rx="1" fill="#3d2b18"/>
+                <rect x="14" y="20" width="4" height="10" rx="1" fill="#3d2b18"/>
+                <rect x="24" y="20" width="4" height="10" rx="1" fill="#3d2b18"/>
+                <rect x="30" y="20" width="4" height="10" rx="1" fill="#3d2b18"/>
+              </g>
+              <!-- Tree -->
+              <ellipse cx="140" cy="130" rx="14" ry="20" fill="#3d2b18" opacity="0.05"/>
+              <rect x="138" y="142" width="3" height="12" fill="#3d2b18" opacity="0.04"/>
+              <!-- Temple -->
+              <path d="M250 140 L250 90 L255 78 L258 68 L260 60 L262 68 L265 78 L270 90 L270 140 Z" fill="#3d2b18" opacity="0.06"/>
+              <!-- Waterfall -->
+              <path d="M280 90 Q282 110 279 130 L283 130 Q281 110 284 90 Z" fill="#3d2b18" opacity="0.05"/>
+            </svg>
+          </div>
+          <div class="card-icon-ring card-icon-ring--warm">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3 21V7l6-4 6 4v2h3l3 3v9H3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <rect x="6" y="9" width="2.5" height="2.5" rx=".5" fill="currentColor"/>
+              <rect x="10" y="9" width="2.5" height="2.5" rx=".5" fill="currentColor"/>
+              <rect x="6" y="13" width="2.5" height="2.5" rx=".5" fill="currentColor"/>
+              <rect x="10" y="13" width="2.5" height="2.5" rx=".5" fill="currentColor"/>
+              <rect x="16" y="14" width="2.5" height="2.5" rx=".5" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <span class="card-label font-body">CITY</span>
+            <span class="card-value font-display">Tirupati,<br>Andhra Pradesh</span>
+          </div>
         </div>
+
       </div>
+    </section>
 
-      <!-- Card 2: Where -->
-      <div class="info-card">
-        <div class="card-icon-wrap card-icon-green">
-          <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.8"/>
-            <circle cx="12" cy="9" r="2.5" fill="currentColor"/>
-          </svg>
+    <!-- ============ BOTTOM ROW ============ -->
+    <section class="bottom-row" id="bottom-row">
+      <div class="container bottom-grid">
+
+        <!-- Details card -->
+        <article class="details-card reveal" id="details">
+          <div class="details-bg" aria-hidden="true">
+            <svg viewBox="0 0 500 300" fill="none" preserveAspectRatio="xMidYMax slice">
+              <path d="M0 300 L0 230 Q60 200 140 218 Q220 190 300 210 Q380 195 420 208 Q460 200 500 215 L500 300 Z" fill="#3d2b18" opacity="0.06"/>
+              <path d="M400 220 L400 140 L406 125 L410 112 L412 104 L414 112 L418 125 L424 140 L424 220 Z" fill="#3d2b18" opacity="0.07"/>
+              <rect x="396" y="155" width="32" height="4" rx="1" fill="#3d2b18" opacity="0.05"/>
+              <ellipse cx="70" cy="240" rx="18" ry="24" fill="#3d2b18" opacity="0.04"/>
+              <rect x="68" y="255" width="4" height="14" fill="#3d2b18" opacity="0.03"/>
+              <ellipse cx="200" cy="235" rx="14" ry="20" fill="#3d2b18" opacity="0.04"/>
+              <g transform="translate(120,260)" opacity="0.04">
+                <ellipse cx="14" cy="10" rx="14" ry="9" fill="#3d2b18"/>
+                <circle cx="3" cy="4" r="5" fill="#3d2b18"/>
+                <path d="M-1 4 Q-4 12 -2 20 L1 20 Q1 14 2 8" fill="#3d2b18"/>
+                <rect x="6" y="17" width="3" height="9" rx="1" fill="#3d2b18"/>
+                <rect x="12" y="17" width="3" height="9" rx="1" fill="#3d2b18"/>
+                <rect x="20" y="17" width="3" height="9" rx="1" fill="#3d2b18"/>
+                <rect x="26" y="17" width="3" height="9" rx="1" fill="#3d2b18"/>
+              </g>
+            </svg>
+          </div>
+          <h2 class="details-heading font-display">Bring your people.</h2>
+          <p class="details-body font-body">
+            Boba Bash Tirupati is happening on <strong>21 September 2026</strong> at <strong>Mohan Babu University</strong>. Come hang out, meet new people and experience a celebration built around everyone's favourite little cup of happiness.
+          </p>
+          <img src="https://boba-bash-brand.vercel.app/pics/cup.png" alt="" class="details-cup-decor" width="32" height="32" aria-hidden="true">
+        </article>
+
+        <!-- CTA card -->
+        <div class="cta-card reveal" style="--delay:.08s" id="cta">
+          <h2 class="cta-heading font-display">Ready to bash?</h2>
+          <p class="cta-sub font-body">Tirupati &bull; 21 September 2026 &bull; Mohan Babu University</p>
+          <a href="https://bash.hackclub.com/events/tirupati"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="cta-button font-body"
+             id="join-btn">JOIN THE BASH &rarr;</a>
         </div>
-        <div class="card-text">
-          <span class="card-label font-body">WHERE</span>
-          <span class="card-value font-display">Mohan Babu<br>University</span>
-        </div>
+
       </div>
+    </section>
+  </main>
 
-      <!-- Card 3: City -->
-      <div class="info-card">
-        <div class="card-icon-wrap card-icon-warm">
-          <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 21V7l6-4 6 4v2h3l3 3v9H3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-            <rect x="6" y="9" width="2.5" height="2.5" rx="0.5" fill="currentColor"/>
-            <rect x="10" y="9" width="2.5" height="2.5" rx="0.5" fill="currentColor"/>
-            <rect x="6" y="13" width="2.5" height="2.5" rx="0.5" fill="currentColor"/>
-            <rect x="10" y="13" width="2.5" height="2.5" rx="0.5" fill="currentColor"/>
-            <rect x="16" y="14" width="2.5" height="2.5" rx="0.5" fill="currentColor"/>
-          </svg>
-        </div>
-        <div class="card-text">
-          <span class="card-label font-body">CITY</span>
-          <span class="card-value font-display">Tirupati,<br>Andhra Pradesh</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Bottom Section: Details + CTA side by side -->
-  <section class="bottom-row" id="bottom-row">
-    <div class="bottom-row-inner">
-
-      <!-- Details -->
-      <div class="details-card" id="details">
-        <div class="details-silhouette" aria-hidden="true">
-          <svg viewBox="0 0 480 280" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
-            <!-- Warm-toned Tirupati landscape -->
-            <!-- Hills -->
-            <path d="M0 280 L0 210 Q50 180 120 200 Q180 170 240 190 Q300 165 360 185 Q420 175 480 195 L480 280 Z" fill="#3d2b18" opacity="0.08"/>
-            <!-- Temple -->
-            <path d="M380 200 L380 120 L386 105 L390 90 L392 80 L394 90 L398 105 L404 120 L404 200 Z" fill="#3d2b18" opacity="0.1"/>
-            <rect x="376" y="135" width="32" height="4" rx="1" fill="#3d2b18" opacity="0.07"/>
-            <rect x="378" y="122" width="28" height="3" rx="1" fill="#3d2b18" opacity="0.07"/>
-            <!-- Trees -->
-            <ellipse cx="60" cy="220" rx="20" ry="26" fill="#3d2b18" opacity="0.06"/>
-            <rect x="58" y="236" width="4" height="15" fill="#3d2b18" opacity="0.05"/>
-            <ellipse cx="180" cy="215" rx="16" ry="22" fill="#3d2b18" opacity="0.05"/>
-            <!-- Waterfall -->
-            <path d="M440 150 Q442 170 439 190 Q443 210 440 230 L444 230 Q442 210 445 190 Q441 170 444 150 Z" fill="#3d2b18" opacity="0.06"/>
-          </svg>
-        </div>
-        <h2 class="details-heading font-display">Bring your people.</h2>
-        <p class="details-body font-body">
-          Boba Bash Tirupati is happening on <strong>21 September 2026</strong> at <strong>Mohan Babu University</strong>. Come hang out, meet new people and experience a celebration built around everyone's favourite little cup of happiness. 🧋
-        </p>
-      </div>
-
-      <!-- CTA -->
-      <div class="cta-card" id="cta">
-        <h2 class="cta-heading font-display">Ready to bash?</h2>
-        <p class="cta-sub font-body">Tirupati &bull; 21 September 2026 &bull; Mohan Babu University</p>
-        <a href="https://bash.hackclub.com/events/tirupati" target="_blank" rel="noopener noreferrer" class="cta-button font-body" id="join-btn">JOIN THE BASH &rarr;</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- ============ FOOTER ============ -->
   <footer class="site-footer" id="site-footer">
-    <div class="footer-divider"></div>
-    <p class="footer-text font-body">&#10024;&#10024; BOBA BASH TIRUPATI &bull; 21 SEPT 2026 &#10024;&#10024;</p>
+    <div class="container">
+      <div class="footer-rule" aria-hidden="true"></div>
+      <p class="footer-text font-body">
+        <span class="footer-star" aria-hidden="true">✦</span>
+        <span class="footer-star" aria-hidden="true">✦</span>
+        BOBA BASH TIRUPATI &bull; 21 SEPT 2026
+        <span class="footer-star" aria-hidden="true">✦</span>
+        <span class="footer-star" aria-hidden="true">✦</span>
+      </p>
+    </div>
   </footer>
 
+  <script src="main.js"></script>
 </body>
 </html>
