@@ -1,6 +1,6 @@
 :root {
   --bg-color: #f8edda;
-  --max-width: 1200px;
+  --max-width: 1100px;
   --gap-desktop: 24px;
   --gap-mobile: 16px;
 }
@@ -11,7 +11,7 @@ html, body {
   width: 100%;
   min-height: 100%;
   background: var(--bg-color);
-  font-family: 'Poppins', sans-serif; /* fallback font */
+  font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -20,14 +20,16 @@ html, body {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-desktop);
 }
 
 /* Header */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  margin-bottom: 40px;
 }
 
 .logo {
@@ -36,46 +38,42 @@ html, body {
   object-fit: contain;
 }
 
-.pin {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
-  border-radius: 50%; /* in case it needs smoothing */
-}
-
-/* Bento Grid System */
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--gap-desktop);
-  align-items: start;
-}
-
-.grid-span-full {
-  grid-column: 1 / -1;
-}
-
-.grid-span-2 {
-  grid-column: span 2;
-}
-
-/* Individual Card Styling */
-.card {
+/* Main Layout Blocks */
+.main-content {
   display: flex;
-  width: 100%;
-  justify-content: center;
+  flex-direction: column;
+  gap: var(--gap-desktop);
 }
 
-.card img {
+/* Base Image Styles */
+.full-image {
   width: 100%;
   height: auto;
   object-fit: contain;
   display: block;
 }
 
-/* Specific scaling for some elements if needed */
-.boba-cup-card img {
-  max-width: 160px; /* Prevent the boba cup from getting too massive if in its own column */
+/* Info Row (Date + Venue + Cup) */
+.section-info {
+  display: flex;
+  align-items: stretch;
+  gap: var(--gap-desktop);
+}
+
+.info-card {
+  flex: 2;
+  display: flex;
+}
+
+.accent-cup {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accent-cup img {
+  max-width: 140px; /* Keep the cup visually proportionate */
   margin: 0 auto;
 }
 
@@ -83,8 +81,16 @@ html, body {
    RESPONSIVE — Tablet ≤ 1024px
    ========================================================== */
 @media (max-width: 1024px) {
-  .bento-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .section-info {
+    flex-wrap: wrap;
+  }
+  
+  .info-card {
+    flex: 1 1 calc(50% - (var(--gap-desktop) / 2));
+  }
+  
+  .accent-cup {
+    flex: 1 1 100%;
   }
 }
 
@@ -94,30 +100,27 @@ html, body {
 @media (max-width: 768px) {
   .site-wrapper {
     padding: 24px 16px;
+    gap: var(--gap-mobile);
   }
   
-  .header {
-    margin-bottom: 24px;
+  .main-content {
+    gap: var(--gap-mobile);
   }
-  
+
   .logo {
     height: 36px;
   }
   
-  .pin {
-    height: 32px;
-  }
-
-  .bento-grid {
-    grid-template-columns: 1fr;
+  .section-info {
+    flex-direction: column;
     gap: var(--gap-mobile);
   }
 
-  .grid-span-2 {
-    grid-column: 1 / -1;
+  .info-card {
+    flex: 1 1 100%;
   }
-  
-  .boba-cup-card img {
-    max-width: 120px;
+
+  .accent-cup img {
+    max-width: 100px;
   }
 }
