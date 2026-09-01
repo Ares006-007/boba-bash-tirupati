@@ -20,9 +20,6 @@ html, body {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 32px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-desktop);
 }
 
 /* Header */
@@ -30,6 +27,7 @@ html, body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 32px;
 }
 
 .logo {
@@ -38,14 +36,21 @@ html, body {
   object-fit: contain;
 }
 
-/* Main Layout Blocks */
-.main-content {
-  display: flex;
-  flex-direction: column;
+/* Bento Grid System */
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   gap: var(--gap-desktop);
+  align-items: stretch;
 }
 
 /* Base Image Styles */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .full-image {
   width: 100%;
   height: auto;
@@ -53,44 +58,53 @@ html, body {
   display: block;
 }
 
-/* Info Row (Date + Venue + Cup) */
-.section-info {
-  display: flex;
-  align-items: stretch;
-  gap: var(--gap-desktop);
+/* Desktop Grid Mapping */
+.hero-card {
+  grid-column: span 12;
 }
 
-.info-card {
-  flex: 2;
-  display: flex;
+.date-card {
+  grid-column: span 4;
 }
 
-.accent-cup {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.venue-card {
+  grid-column: span 4;
 }
 
-.accent-cup img {
-  max-width: 140px; /* Keep the cup visually proportionate */
+.content-card {
+  grid-column: span 8;
+}
+
+.cup-card {
+  grid-column: span 4;
+}
+
+.cup-card img {
+  max-width: 180px;
   margin: 0 auto;
+}
+
+.cta-card {
+  grid-column: span 12;
 }
 
 /* ==========================================================
    RESPONSIVE — Tablet ≤ 1024px
    ========================================================== */
 @media (max-width: 1024px) {
-  .section-info {
-    flex-wrap: wrap;
+  .date-card, .venue-card, .cup-card {
+    grid-column: span 6;
+  }
+  .content-card {
+    grid-column: span 12;
   }
   
-  .info-card {
-    flex: 1 1 calc(50% - (var(--gap-desktop) / 2));
+  /* Hide or re-flow the cup nicely if it becomes an odd one out */
+  .cup-card {
+    grid-column: span 12; 
   }
-  
-  .accent-cup {
-    flex: 1 1 100%;
+  .cup-card img {
+    max-width: 140px;
   }
 }
 
@@ -100,27 +114,31 @@ html, body {
 @media (max-width: 768px) {
   .site-wrapper {
     padding: 24px 16px;
-    gap: var(--gap-mobile);
   }
   
-  .main-content {
-    gap: var(--gap-mobile);
+  .header {
+    margin-bottom: 24px;
   }
-
+  
   .logo {
     height: 36px;
   }
-  
-  .section-info {
-    flex-direction: column;
+
+  .main-grid {
     gap: var(--gap-mobile);
   }
 
-  .info-card {
-    flex: 1 1 100%;
+  /* Stack everything into 1 column */
+  .hero-card,
+  .date-card,
+  .venue-card,
+  .content-card,
+  .cup-card,
+  .cta-card {
+    grid-column: span 12;
   }
 
-  .accent-cup img {
+  .cup-card img {
     max-width: 100px;
   }
 }
