@@ -88,3 +88,64 @@ a {
 .font-body {
   font-family: var(--font-body);
 }
+
+/* ============================================
+   Header
+   ============================================ */
+
+.site-header {
+  padding: var(--space-md) var(--space-lg);
+  background: var(--surface);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  text-decoration: none;
+  border: var(--border-width) solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 6px 18px 6px 10px;
+  background: var(--surface);
+  transition: box-shadow 0.2s ease;
+}
+
+.header-logo:hover {
+  box-shadow: var(--shadow-card);
+}
+
+.header-cup {
+  width: 32px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.header-logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.header-pill {
+  display: inline-block;
+  background: var(--goldenrod);
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 20px;
+  border-radius: var(--radius-pill);
+  border: var(--border-width) solid var(--line);
+  letter-spacing: 0.02em;
+}
