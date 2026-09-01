@@ -99,6 +99,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid var(--surface-alt);
 }
 
 .header-inner {
@@ -387,6 +388,15 @@ a {
   line-height: 1.7;
 }
 
+.details-cup {
+  position: relative;
+  z-index: 1;
+  width: 36px;
+  height: auto;
+  margin: 0 auto var(--space-md);
+  opacity: 0.6;
+}
+
 /* ============================================
    CTA Section
    ============================================ */
@@ -451,6 +461,16 @@ a {
 .site-footer {
   padding: var(--space-xl) var(--space-lg);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.footer-cup {
+  width: 18px;
+  height: auto;
+  opacity: 0.45;
 }
 
 .footer-text {
