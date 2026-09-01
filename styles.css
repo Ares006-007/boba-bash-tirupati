@@ -1,17 +1,123 @@
-html,
-body {
+:root {
+  --bg-color: #f8edda;
+  --max-width: 1200px;
+  --gap-desktop: 24px;
+  --gap-mobile: 16px;
+}
+
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   min-height: 100%;
+  background: var(--bg-color);
+  font-family: 'Poppins', sans-serif; /* fallback font */
   overflow-x: hidden;
-  background: #f8edda;
+  -webkit-font-smoothing: antialiased;
 }
 
-.event-artwork {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
+.site-wrapper {
+  max-width: var(--max-width);
   margin: 0 auto;
+  padding: 32px 24px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.pin {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 50%; /* in case it needs smoothing */
+}
+
+/* Bento Grid System */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-desktop);
+  align-items: start;
+}
+
+.grid-span-full {
+  grid-column: 1 / -1;
+}
+
+.grid-span-2 {
+  grid-column: span 2;
+}
+
+/* Individual Card Styling */
+.card {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Specific scaling for some elements if needed */
+.boba-cup-card img {
+  max-width: 160px; /* Prevent the boba cup from getting too massive if in its own column */
+  margin: 0 auto;
+}
+
+/* ==========================================================
+   RESPONSIVE — Tablet ≤ 1024px
+   ========================================================== */
+@media (max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE — Mobile ≤ 768px
+   ========================================================== */
+@media (max-width: 768px) {
+  .site-wrapper {
+    padding: 24px 16px;
+  }
+  
+  .header {
+    margin-bottom: 24px;
+  }
+  
+  .logo {
+    height: 36px;
+  }
+  
+  .pin {
+    height: 32px;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-mobile);
+  }
+
+  .grid-span-2 {
+    grid-column: 1 / -1;
+  }
+  
+  .boba-cup-card img {
+    max-width: 120px;
+  }
 }
