@@ -363,6 +363,11 @@ header {
     object-fit: contain;
 }
 
+.step-img-3 {
+    transform: scale(1.35);
+    transform-origin: center;
+}
+
 .step-text h3 {
     font-size: 24px;
     font-weight: 800;
