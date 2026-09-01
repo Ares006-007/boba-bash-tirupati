@@ -10,83 +10,113 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="site-wrapper">
-    <!-- Header -->
+  <div class="page-shell">
+    
+    <!-- HEADER -->
     <header class="header">
       <img src="assets/logofull.png" alt="Boba Bash Logo" class="logo">
-      <div class="header-pill font-display">TIRUPATI &bull; 2026</div>
+      <div class="header-pill">TIRUPATI &bull; 2026</div>
     </header>
     <div class="header-divider"></div>
     
-    <main class="main-content">
-      <!-- Hero Section -->
-      <section class="hero-section">
-        <div class="hero-bg-elements">
-           <!-- Subtle background styling elements will go in CSS -->
+    <!-- LARGE HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-announcement font-body">THE BOBA BASH IS COMING</div>
+        <h1 class="hero-title font-display">
+          Boba<br>Bash<br><span class="title-city">TIRUPATI</span>
+        </h1>
+        <p class="hero-desc font-body">
+          Get ready for a day packed with boba, people, creativity and unforgettable moments. Tirupati, we’re bringing the Boba Bash to you!
+        </p>
+      </div>
+      <div class="hero-right">
+        <!-- Using mock (3).webp as the large boba cup illustration as it was the previous hero asset -->
+        <!-- Or boba cup.png, but mock (3) is likely the intricate illustration -->
+        <img src="assets/mock (3).webp" alt="Boba Bash Hero Cup" class="hero-cup">
+      </div>
+    </section>
+
+    <!-- THREE INFORMATION CARDS -->
+    <section class="info-grid">
+      <!-- WHEN Card -->
+      <div class="info-card">
+        <div class="card-bg">
+          <img src="assets/date card.jpeg" alt="" loading="lazy">
         </div>
-        <div class="hero-left">
-          <div class="hero-pill font-body">THE BOBA BASH IS COMING</div>
-          <h1 class="hero-title font-display">
-            <span class="title-main">Boba<br>Bash</span><br>
-            <span class="title-city">TIRUPATI</span>
-          </h1>
-          <p class="hero-desc font-body">
-            Get ready for a day packed with boba, people, creativity and unforgettable moments. Tirupati, we're bringing the Boba Bash to you!
+        <div class="card-content font-body">
+          <span class="card-label">WHEN</span>
+          <div class="card-value">21 September<br>2026</div>
+        </div>
+      </div>
+      
+      <!-- WHERE Card -->
+      <div class="info-card">
+        <div class="card-bg">
+          <img src="assets/venue card.jpeg" alt="" loading="lazy">
+        </div>
+        <div class="card-content font-body">
+          <span class="card-label">WHERE</span>
+          <div class="card-value">Mohan Babu<br>University</div>
+        </div>
+      </div>
+      
+      <!-- CITY Card -->
+      <div class="info-card">
+        <div class="card-bg">
+          <!-- Fallback to venue card artwork for City since no venue-city card asset was found -->
+          <img src="assets/contentcard.jpeg" alt="" loading="lazy">
+        </div>
+        <div class="card-content font-body">
+          <span class="card-label">CITY</span>
+          <div class="card-value">Tirupati,<br>Andhra Pradesh</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOWER TWO-COLUMN SECTION -->
+    <section class="lower-grid">
+      <!-- Left Panel: Bring your people -->
+      <div class="content-panel">
+        <div class="card-bg">
+          <img src="assets/contentcard.jpeg" alt="" loading="lazy">
+        </div>
+        <div class="panel-content font-body">
+          <h2 class="font-display">Bring your people.</h2>
+          <p>
+            Boba Bash Tirupati is happening on 21 September 2026 at Mohan Babu University. Come hang out, meet new people and experience a celebration built around everyone’s favourite little cup of happiness.
           </p>
         </div>
-        <div class="hero-right">
-          <img src="assets/mock (3).webp" alt="Hero Artwork" class="hero-artwork">
-        </div>
-      </section>
-
-      <!-- Info Cards Row -->
-      <section class="info-row">
-        <!-- The user mapped "Bash Now card" to the first info card, Date to WHEN, Venue to WHERE. -->
-        <!-- But wait, if Bash Now is the first card, what about CITY? The prompt had WHEN, WHERE, CITY. -->
-        <!-- We will just display the three available image cards in a row to match the 3-card layout. -->
-        <div class="card">
-          <img src="assets/bash now card.jpeg" alt="Bash Now" class="full-image">
-        </div>
-        <div class="card">
-          <img src="assets/date card.jpeg" alt="When: 21 September 2026" class="full-image">
-        </div>
-        <div class="card">
-          <img src="assets/venue card.jpeg" alt="Where: Mohan Babu University" class="full-image">
-        </div>
-      </section>
+      </div>
       
-      <!-- Lower Content Row -->
-      <section class="content-row">
-        <div class="content-left">
-          <img src="assets/contentcard.jpeg" alt="Bring your people. Boba Bash Tirupati is happening..." class="full-image">
+      <!-- Right Panel: CTA -->
+      <div class="cta-panel">
+        <div class="panel-content font-body">
+          <h2 class="font-display">Ready to bash?</h2>
+          <p>Tirupati &bull; 21 September 2026 &bull; Mohan Babu University</p>
+          <a href="#" class="cta-btn">JOIN THE BASH &rarr;</a>
         </div>
-        
-        <div class="content-right cta-panel">
-          <h2 class="cta-heading font-display">Ready to bash?</h2>
-          <p class="cta-details font-body">Tirupati &bull; 21 September 2026<br>Mohan Babu University</p>
-          <a href="#" class="cta-button font-body">JOIN THE BASH &rarr;</a>
-          <!-- Raccoon Sign-up Illustration -->
-          <img src="assets/raccoon-signup-CmhNPqMA.webp" alt="Raccoon Sign-up" class="cta-raccoon">
-        </div>
-      </section>
-      
-      <!-- Extras (Community / Gallery) -->
-      <section class="gallery-row">
-        <div class="card gallery-card">
-          <img src="assets/mock.webp" alt="Community Event Image 1" class="full-image" loading="lazy">
-        </div>
-        <div class="card gallery-card">
-          <img src="assets/mock (2).webp" alt="Community Event Image 2" class="full-image" loading="lazy">
-        </div>
-      </section>
-    </main>
+        <img src="assets/raccoon-signup-CmhNPqMA.webp" alt="Raccoon Sign-up" class="cta-raccoon" loading="lazy">
+      </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-line font-body">
+    <!-- PHOTOS (Secondary Section) -->
+    <section class="gallery-grid">
+      <div class="gallery-photo">
+        <img src="assets/mock.webp" alt="Event photo" loading="lazy">
+      </div>
+      <div class="gallery-photo">
+        <img src="assets/mock (2).webp" alt="Event photo" loading="lazy">
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer font-body">
+      <div class="footer-line">
         <span class="star">✦</span> BOBA BASH TIRUPATI &bull; 21 SEPT 2026 <span class="star">✦</span>
       </div>
     </footer>
+    
   </div>
 </body>
 </html>
