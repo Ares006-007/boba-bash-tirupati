@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boba Bash Tirupati — 21 September 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,39 +14,79 @@
     <!-- Header -->
     <header class="header">
       <img src="assets/logofull.png" alt="Boba Bash Logo" class="logo">
+      <div class="header-pill font-display">TIRUPATI &bull; 2026</div>
     </header>
+    <div class="header-divider"></div>
     
-    <main class="main-grid">
+    <main class="main-content">
       <!-- Hero Section -->
-      <section class="card hero-card">
-        <img src="assets/hero.jpeg.png" alt="Boba Bash Tirupati Hero Graphic" class="full-image">
+      <section class="hero-section">
+        <div class="hero-bg-elements">
+           <!-- Subtle background styling elements will go in CSS -->
+        </div>
+        <div class="hero-left">
+          <div class="hero-pill font-body">THE BOBA BASH IS COMING</div>
+          <h1 class="hero-title font-display">
+            <span class="title-main">Boba<br>Bash</span><br>
+            <span class="title-city">TIRUPATI</span>
+          </h1>
+          <p class="hero-desc font-body">
+            Get ready for a day packed with boba, people, creativity and unforgettable moments. Tirupati, we're bringing the Boba Bash to you!
+          </p>
+        </div>
+        <div class="hero-right">
+          <img src="assets/mock (3).webp" alt="Hero Artwork" class="hero-artwork">
+        </div>
       </section>
 
-      <!-- Date Card -->
-      <section class="card date-card">
-        <img src="assets/date card.jpeg" alt="When: 21 September 2026" class="full-image">
+      <!-- Info Cards Row -->
+      <section class="info-row">
+        <!-- The user mapped "Bash Now card" to the first info card, Date to WHEN, Venue to WHERE. -->
+        <!-- But wait, if Bash Now is the first card, what about CITY? The prompt had WHEN, WHERE, CITY. -->
+        <!-- We will just display the three available image cards in a row to match the 3-card layout. -->
+        <div class="card">
+          <img src="assets/bash now card.jpeg" alt="Bash Now" class="full-image">
+        </div>
+        <div class="card">
+          <img src="assets/date card.jpeg" alt="When: 21 September 2026" class="full-image">
+        </div>
+        <div class="card">
+          <img src="assets/venue card.jpeg" alt="Where: Mohan Babu University" class="full-image">
+        </div>
       </section>
       
-      <!-- Venue Card -->
-      <section class="card venue-card">
-        <img src="assets/venue card.jpeg" alt="Where: Mohan Babu University" class="full-image">
+      <!-- Lower Content Row -->
+      <section class="content-row">
+        <div class="content-left">
+          <img src="assets/contentcard.jpeg" alt="Bring your people. Boba Bash Tirupati is happening..." class="full-image">
+        </div>
+        
+        <div class="content-right cta-panel">
+          <h2 class="cta-heading font-display">Ready to bash?</h2>
+          <p class="cta-details font-body">Tirupati &bull; 21 September 2026<br>Mohan Babu University</p>
+          <a href="#" class="cta-button font-body">JOIN THE BASH &rarr;</a>
+          <!-- Raccoon Sign-up Illustration -->
+          <img src="assets/raccoon-signup-CmhNPqMA.webp" alt="Raccoon Sign-up" class="cta-raccoon">
+        </div>
       </section>
       
-      <!-- Content Card -->
-      <section class="card content-card">
-        <img src="assets/contentcard.jpeg" alt="Bring your people. Boba Bash Tirupati is happening..." class="full-image">
-      </section>
-
-      <!-- Boba Cup Accent -->
-      <section class="card cup-card">
-        <img src="assets/boba cup.png" alt="Boba cup illustration" class="full-image">
-      </section>
-
-      <!-- CTA Card -->
-      <section class="card cta-card">
-        <img src="assets/bash now card.jpeg" alt="Ready to Bash? Join the bash" class="full-image">
+      <!-- Extras (Community / Gallery) -->
+      <section class="gallery-row">
+        <div class="card gallery-card">
+          <img src="assets/mock.webp" alt="Community Event Image 1" class="full-image" loading="lazy">
+        </div>
+        <div class="card gallery-card">
+          <img src="assets/mock (2).webp" alt="Community Event Image 2" class="full-image" loading="lazy">
+        </div>
       </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-line font-body">
+        <span class="star">✦</span> BOBA BASH TIRUPATI &bull; 21 SEPT 2026 <span class="star">✦</span>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
