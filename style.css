@@ -858,9 +858,274 @@ html {
     }
 }
 
-/* --- Mobile responsiveness for animations --- */
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* --- Tablet (≤ 1024px) --- */
+
+@media (max-width: 1024px) {
+    body {
+        padding: 20px 24px;
+    }
+
+    .title-boba,
+    .title-bash {
+        font-size: 100px;
+    }
+
+    .title-tirupati {
+        font-size: 55px;
+    }
+
+    .hero {
+        padding: 45px;
+    }
+
+    .hero-text-area {
+        max-width: 70%;
+    }
+
+    .hero-desc {
+        font-size: 18px;
+    }
+
+    .bottom-card {
+        padding: 50px;
+        min-height: 300px;
+    }
+
+    .left-card h2,
+    .middle-card h2,
+    .what-you-do-card h2 {
+        font-size: 44px;
+    }
+
+    .left-card p,
+    .middle-card p {
+        font-size: 18px;
+        max-width: 85%;
+    }
+
+    .raccoon-img {
+        width: 320px;
+        right: -120px;
+    }
+
+    .step-img {
+        height: 140px;
+    }
+
+    .step-img-3 {
+        transform: scale(1.2);
+    }
+
+    .steps-container {
+        gap: 20px;
+    }
+
+    .right-card h2 {
+        font-size: 40px;
+    }
+}
+
+/* --- Small Tablet / Large Phone (≤ 768px) --- */
 
 @media (max-width: 768px) {
+    body {
+        padding: 16px;
+    }
+
+    /* Header */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .logo-icon {
+        width: 26px;
+    }
+
+    .badge-yellow {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 30px 24px;
+        flex-direction: column;
+    }
+
+    .hero-text-area {
+        max-width: 100%;
+    }
+
+    .title-boba,
+    .title-bash {
+        font-size: 72px;
+        letter-spacing: -1px;
+    }
+
+    .title-tirupati {
+        font-size: 40px;
+    }
+
+    .pill-badge {
+        font-size: 12px;
+        padding: 6px 14px;
+        margin-bottom: 18px;
+    }
+
+    .pill-badge .badge-icon {
+        width: 16px;
+        margin-right: 8px;
+    }
+
+    .hero-desc {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .hero-desc br {
+        display: none;
+    }
+
+    /* Info Cards — stack vertically */
+    .info-cards {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .info-card {
+        padding: 24px 22px;
+    }
+
+    .icon-circle {
+        width: 56px;
+        height: 56px;
+    }
+
+    .icon-circle svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .info-val {
+        font-size: 22px;
+    }
+
+    /* Bottom Cards */
+    .bottom-card {
+        padding: 36px 24px;
+        min-height: auto;
+    }
+
+    .left-card h2,
+    .middle-card h2,
+    .what-you-do-card h2 {
+        font-size: 32px;
+        margin-bottom: 14px;
+    }
+
+    .left-card p,
+    .middle-card p {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    /* Middle card container */
+    .middle-card-container {
+        width: 100% !important;
+    }
+
+    .raccoon-img {
+        width: 200px;
+        right: -60px;
+        bottom: -20px;
+    }
+
+    /* Steps — stack vertically */
+    .steps-container {
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 24px;
+    }
+
+    .step {
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .step-img {
+        height: 100px;
+    }
+
+    .step-img-3 {
+        transform: scale(1.1);
+    }
+
+    .step-divider {
+        width: 80%;
+        height: 1px;
+        border-left: none;
+        border-top: 2px dotted rgba(43, 26, 16, 0.4);
+        align-self: center;
+    }
+
+    .step-divider.visible {
+        transform: scaleX(1);
+    }
+
+    .step-divider {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    .step-text h3 {
+        font-size: 20px;
+    }
+
+    .step-text p {
+        font-size: 14px;
+    }
+
+    /* CTA card */
+    .right-card h2 {
+        font-size: 34px;
+    }
+
+    .small-info {
+        font-size: 16px;
+    }
+
+    .join-btn {
+        padding: 16px 32px;
+        font-size: 18px;
+    }
+
+    /* Footer */
+    footer {
+        gap: 12px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .star {
+        font-size: 16px;
+    }
+
+    /* Animation tweaks */
     .floating-cup {
         width: 25px;
     }
@@ -880,5 +1145,165 @@ html {
 
     .join-btn:hover {
         transform: translateY(-3px) scale(1.02);
+    }
+}
+
+/* --- Mobile (≤ 480px) --- */
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .logo-icon {
+        width: 22px;
+        margin-left: 6px;
+    }
+
+    .badge-yellow {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 24px 18px;
+        border-radius: 14px;
+    }
+
+    .title-boba,
+    .title-bash {
+        font-size: 52px;
+        text-shadow:
+            -2px -2px 0 #382314,
+             2px -2px 0 #382314,
+            -2px  2px 0 #382314,
+             2px  2px 0 #382314,
+             0px  2px 0 #382314,
+             2px  0px 0 #382314,
+            -2px  0px 0 #382314,
+             0px -2px 0 #382314;
+    }
+
+    .title-boba {
+        text-shadow: none;
+    }
+
+    .title-tirupati {
+        font-size: 30px;
+    }
+
+    .hero-desc {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .pill-badge {
+        font-size: 10px;
+        padding: 5px 12px;
+    }
+
+    /* Info Cards */
+    .info-card {
+        padding: 20px 18px;
+        gap: 14px;
+        border-radius: 12px;
+    }
+
+    .icon-circle {
+        width: 48px;
+        height: 48px;
+    }
+
+    .icon-circle svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .info-label {
+        font-size: 13px;
+    }
+
+    .info-val {
+        font-size: 20px;
+    }
+
+    /* Bottom Cards */
+    .bottom-card {
+        padding: 28px 18px;
+        border-radius: 12px;
+    }
+
+    .left-card h2,
+    .middle-card h2,
+    .what-you-do-card h2 {
+        font-size: 26px;
+    }
+
+    .left-card p,
+    .middle-card p {
+        font-size: 14px;
+    }
+
+    .raccoon-img {
+        width: 150px;
+        right: -40px;
+        bottom: -15px;
+    }
+
+    /* Steps */
+    .step {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .step-img {
+        height: 90px;
+    }
+
+    .step-text h3 {
+        font-size: 18px;
+    }
+
+    .step-text p {
+        font-size: 13px;
+    }
+
+    /* CTA */
+    .right-card h2 {
+        font-size: 28px;
+    }
+
+    .small-info {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .join-btn {
+        padding: 14px 28px;
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer-text {
+        font-size: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .star {
+        font-size: 14px;
+    }
+
+    /* Hide floating cups on very small screens for performance */
+    .floating-boba-container {
+        display: none;
     }
 }
