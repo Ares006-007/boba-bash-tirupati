@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boba Bash Tirupati</title>
-    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet" href="style.css?v=2.0">
 </head>
 
 <body>
+    <!-- Floating Boba Cups Background -->
+    <div class="floating-boba-container" id="floatingBoba"></div>
+
     <div class="container">
         <!-- Header -->
         <header>
@@ -22,7 +25,7 @@
         </header>
 
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" id="heroSection">
             <div class="hero-text-area">
                 <div class="pill-badge">
                     <img src="./assets/boba cup.png" alt="icon" class="badge-icon">
@@ -43,7 +46,7 @@
 
         <!-- Info Cards -->
         <section class="info-cards">
-            <div class="info-card">
+            <div class="info-card reveal reveal-delay-1">
                 <div class="icon-circle bg-yellow">
                     <svg viewBox="0 0 24 24">
                         <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -59,7 +62,7 @@
                     <div class="info-val">21 September<br>2026</div>
                 </div>
             </div>
-            <div class="info-card">
+            <div class="info-card reveal reveal-delay-2">
                 <div class="icon-circle bg-green">
                     <svg viewBox="0 0 24 24">
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -71,7 +74,7 @@
                     <div class="info-val">Mohan Babu<br>University</div>
                 </div>
             </div>
-            <div class="info-card">
+            <div class="info-card reveal reveal-delay-3">
                 <div class="icon-circle bg-blue">
                     <svg viewBox="0 0 24 24">
                         <path d="M4 21V9a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v12"></path>
@@ -93,13 +96,13 @@
 
         <!-- Bottom Cards -->
         <section class="bottom-cards">
-            <div class="bottom-card left-card">
+            <div class="bottom-card left-card reveal">
                 <h2>Bring your people.</h2>
                 <p>Boba Bash Tirupati is happening on <strong>21 September 2026</strong> at <strong>Mohan Babu
                         University</strong>. Come hang out, meet new people and experience a celebration built around
                     everyone's favourite little cup of happiness.</p>
             </div>
-            <div class="middle-card-container" style="position: relative; width: 85%; align-self: flex-start;">
+            <div class="middle-card-container reveal" style="position: relative; width: 85%; align-self: flex-start;">
                 <div class="bottom-card middle-card">
                     <h2>What is Boba Bash?</h2>
                     <p>Boba Bash is an epic gathering for creative people. Come build, share, and connect with a
@@ -108,7 +111,7 @@
                 <img src="./assets/raccoon-boba-CiAIXHwE-removebg-preview.png" alt="Animals with Boba"
                     class="raccoon-img">
             </div>
-            <div class="bottom-card what-you-do-card">
+            <div class="bottom-card what-you-do-card reveal">
                 <h2>What do you do at a Boba Bash?</h2>
                 <div class="steps-container">
                     <div class="step">
@@ -140,7 +143,7 @@
                     </div>
                 </div>
             </div>
-            <div class="bottom-card right-card">
+            <div class="bottom-card right-card reveal">
                 <h2>Ready to bash?</h2>
                 <p class="small-info">Tirupati &bull; 21 September 2026 &bull; Mohan Babu University</p>
                 <a href="https://bash.hackclub.com/events/tirupati" class="join-btn" target="_blank"
@@ -157,6 +160,156 @@
             <div class="footer-line"></div>
         </footer>
     </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Respect reduced motion
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // ─── Intersection Observer for scroll reveals ───
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        // Observe all reveal elements
+        document.querySelectorAll('.reveal, .footer-line, .footer-text, .step-divider').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // ─── Floating Boba Cups (background particles) ───
+        if (!prefersReducedMotion) {
+            const bobaContainer = document.getElementById('floatingBoba');
+            const cupSrc = './assets/boba cup.png';
+            const maxCups = 6;
+            let activeCups = 0;
+
+            function spawnFloatingCup() {
+                if (activeCups >= maxCups) return;
+
+                const cup = document.createElement('img');
+                cup.src = cupSrc;
+                cup.classList.add('floating-cup');
+                cup.alt = '';
+                cup.setAttribute('aria-hidden', 'true');
+
+                // Random horizontal position
+                cup.style.left = Math.random() * 90 + 5 + '%';
+
+                // Random size variation
+                const size = 25 + Math.random() * 30;
+                cup.style.width = size + 'px';
+
+                // Random duration (slow, dreamy)
+                const duration = 12 + Math.random() * 18;
+                cup.style.animationDuration = duration + 's';
+
+                // Random delay
+                cup.style.animationDelay = Math.random() * 2 + 's';
+
+                bobaContainer.appendChild(cup);
+                activeCups++;
+
+                // Clean up after animation
+                cup.addEventListener('animationend', () => {
+                    cup.remove();
+                    activeCups--;
+                });
+            }
+
+            // Initial burst of cups
+            for (let i = 0; i < 3; i++) {
+                setTimeout(() => spawnFloatingCup(), i * 800);
+            }
+
+            // Spawn new cups periodically
+            setInterval(spawnFloatingCup, 4000);
+        }
+
+        // ─── Soft bubble particles in hero section ───
+        if (!prefersReducedMotion) {
+            const hero = document.getElementById('heroSection');
+
+            function spawnBubble() {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                bubble.setAttribute('aria-hidden', 'true');
+
+                const size = 6 + Math.random() * 16;
+                bubble.style.width = size + 'px';
+                bubble.style.height = size + 'px';
+                bubble.style.left = Math.random() * 100 + '%';
+                bubble.style.bottom = Math.random() * 30 + '%';
+
+                const duration = 3 + Math.random() * 4;
+                bubble.style.animationDuration = duration + 's';
+
+                hero.appendChild(bubble);
+
+                setTimeout(() => bubble.remove(), duration * 1000);
+            }
+
+            setInterval(spawnBubble, 1200);
+        }
+
+        // ─── Subtle parallax on hero ───
+        if (!prefersReducedMotion) {
+            const hero = document.getElementById('heroSection');
+            let ticking = false;
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        const scrolled = window.pageYOffset;
+                        const heroRect = hero.getBoundingClientRect();
+
+                        // Only apply parallax when hero is in view
+                        if (heroRect.bottom > 0 && heroRect.top < window.innerHeight) {
+                            const offset = scrolled * 0.15;
+                            hero.style.setProperty('--parallax-y', offset + 'px');
+                            // Move the background pseudo-element
+                            const before = hero.querySelector(':scope')
+                            if (before) {
+                                hero.style.backgroundPositionY = offset + 'px';
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        }
+
+        // ─── Tilt effect on info cards ───
+        if (!prefersReducedMotion && window.innerWidth > 768) {
+            document.querySelectorAll('.info-card').forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+
+                    const rotateX = (y - centerY) / centerY * -3;
+                    const rotateY = (x - centerX) / centerX * 3;
+
+                    card.style.transform = `translateY(-8px) scale(1.02) perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                });
+            });
+        }
+    });
+    </script>
 </body>
 
 </html>

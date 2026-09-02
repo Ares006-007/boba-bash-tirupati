@@ -469,3 +469,416 @@ footer {
     z-index: 10;
     transform: rotate(2deg);
 }
+
+/* =========================================
+   ANIMATIONS — Boba Bash Tirupati
+   ========================================= */
+
+/* --- Keyframes --- */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.92) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes floatBoba {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25%      { transform: translateY(-18px) rotate(5deg); }
+    50%      { transform: translateY(-8px) rotate(-3deg); }
+    75%      { transform: translateY(-22px) rotate(4deg); }
+}
+
+@keyframes bubbleDrift {
+    0%   { transform: translateY(0) scale(1); opacity: 0.5; }
+    50%  { transform: translateY(-60px) scale(1.15); opacity: 0.3; }
+    100% { transform: translateY(-120px) scale(0.9); opacity: 0; }
+}
+
+@keyframes gentlePulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.06); }
+}
+
+@keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+@keyframes bounceIn {
+    0%   { transform: scale(0.3); opacity: 0; }
+    50%  { transform: scale(1.08); }
+    70%  { transform: scale(0.95); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes starTwinkle {
+    0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    50%      { opacity: 0.5; transform: scale(1.3) rotate(15deg); }
+}
+
+@keyframes raccoonBob {
+    0%, 100% { transform: rotate(2deg) translateY(0); }
+    50%      { transform: rotate(4deg) translateY(-8px); }
+}
+
+@keyframes floatingCup {
+    0% {
+        transform: translateY(100vh) rotate(0deg) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.15;
+    }
+    90% {
+        opacity: 0.12;
+    }
+    100% {
+        transform: translateY(-120vh) rotate(360deg) scale(1);
+        opacity: 0;
+    }
+}
+
+/* --- Scroll-Reveal base state --- */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays for cards */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* --- Hero Entrance Animations --- */
+
+.hero .pill-badge {
+    animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.hero .title-boba {
+    animation: slideInLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
+}
+
+.hero .title-bash {
+    animation: slideInLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.55s both;
+}
+
+.hero .title-tirupati {
+    animation: fadeInScale 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.7s both;
+}
+
+.hero .hero-desc {
+    animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.9s both;
+}
+
+/* --- Logo entrance --- */
+
+.logo {
+    animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.badge-yellow {
+    animation: bounceIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+/* --- Logo icon gentle float --- */
+
+.logo-icon {
+    animation: floatBoba 4s ease-in-out infinite;
+}
+
+/* --- Raccoon bob --- */
+
+.raccoon-img {
+    animation: raccoonBob 3s ease-in-out infinite;
+}
+
+/* --- Star twinkle in footer --- */
+
+.star {
+    display: inline-block;
+    animation: starTwinkle 2.5s ease-in-out infinite;
+}
+
+.star:last-child {
+    animation-delay: 1.2s;
+}
+
+/* --- Hover Effects: Buttons --- */
+
+.join-btn {
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.35s ease,
+                background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.join-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 206, 84, 0.25);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.join-btn:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 12px 35px rgba(43, 26, 16, 0.25),
+                0 0 20px rgba(255, 206, 84, 0.3);
+    background-color: #3d2518;
+}
+
+.join-btn:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+.join-btn:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 4px 15px rgba(43, 26, 16, 0.2);
+}
+
+/* --- Hover Effects: Badge --- */
+
+.badge-yellow {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.3s ease;
+}
+
+.badge-yellow:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 206, 84, 0.35);
+}
+
+.pill-badge {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.3s ease;
+}
+
+.pill-badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(43, 26, 16, 0.15);
+}
+
+/* --- Hover Effects: Info Cards --- */
+
+.info-card {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.4s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(43, 26, 16, 0.15);
+}
+
+.info-card:hover .icon-circle {
+    animation: gentlePulse 0.6s ease-in-out;
+}
+
+/* --- Hover Effects: Bottom Cards --- */
+
+.bottom-card {
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.45s ease;
+}
+
+.bottom-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(43, 26, 16, 0.12);
+}
+
+/* --- Step hover --- */
+
+.step {
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step:hover .step-img {
+    animation: gentlePulse 0.5s ease-in-out;
+}
+
+/* --- Icon circle hover glow --- */
+
+.icon-circle {
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.35s ease;
+}
+
+.icon-circle:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 18px rgba(255, 206, 84, 0.4);
+}
+
+/* --- Floating Boba Cups (background particles) --- */
+
+.floating-boba-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.floating-cup {
+    position: absolute;
+    bottom: -80px;
+    width: 40px;
+    height: auto;
+    opacity: 0;
+    animation: floatingCup linear infinite;
+    filter: blur(1px) saturate(0.6);
+}
+
+/* --- Soft bubble particles --- */
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 206, 84, 0.35), rgba(79, 165, 226, 0.15));
+    pointer-events: none;
+    animation: bubbleDrift ease-in-out infinite;
+}
+
+/* --- Parallax on hero background --- */
+
+.hero {
+    transition: background-position 0.1s ease-out;
+}
+
+/* --- Footer line animation --- */
+
+.footer-line {
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.footer-line.visible {
+    transform: scaleX(1);
+}
+
+.footer-text {
+    opacity: 0;
+    transition: opacity 0.8s ease 0.4s;
+}
+
+.footer-text.visible {
+    opacity: 1;
+}
+
+/* --- Step divider draw-in --- */
+
+.step-divider {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s;
+}
+
+.step-divider.visible {
+    transform: scaleY(1);
+}
+
+/* --- Smooth scroll --- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Reduced Motion --- */
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .floating-boba-container {
+        display: none;
+    }
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* --- Mobile responsiveness for animations --- */
+
+@media (max-width: 768px) {
+    .floating-cup {
+        width: 25px;
+    }
+
+    .hero .title-boba,
+    .hero .title-bash {
+        animation-name: fadeInUp;
+    }
+
+    .bottom-card:hover {
+        transform: translateY(-3px);
+    }
+
+    .info-card:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+
+    .join-btn:hover {
+        transform: translateY(-3px) scale(1.02);
+    }
+}
