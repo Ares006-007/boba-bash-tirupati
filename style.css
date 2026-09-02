@@ -36,7 +36,7 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    font-size: 36px;
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
     font-weight: 700;
     font-family: 'Fredoka', sans-serif;
     line-height: 1;
@@ -63,7 +63,7 @@ header {
     border-radius: 50px;
     padding: 10px 24px;
     font-weight: 800;
-    font-size: 18px;
+    font-size: clamp(0.75rem, 1.2vw, 1.125rem);
     letter-spacing: 0.5px;
 }
 
@@ -119,13 +119,13 @@ header {
 }
 
 .title-boba {
-    font-size: 140px;
+    font-size: clamp(3.25rem, 10vw, 8.75rem);
     color: #382314;
     letter-spacing: -2px;
 }
 
 .title-bash {
-    font-size: 140px;
+    font-size: clamp(3.25rem, 10vw, 8.75rem);
     color: #f5ebe0;
     text-shadow: 
         -3px -3px 0 #382314,
@@ -140,7 +140,7 @@ header {
 }
 
 .title-tirupati {
-    font-size: 75px;
+    font-size: clamp(1.875rem, 5.5vw, 4.6875rem);
     color: #ffce54;
     text-shadow: 
         -2px -2px 0 #382314,
@@ -156,10 +156,10 @@ header {
 
 .hero-desc {
     color: #fff;
-    font-size: 20px;
+    font-size: clamp(0.875rem, 1.5vw, 1.25rem);
     font-weight: 600;
     line-height: 1.5;
-    max-width: 500px;
+    max-width: min(500px, 100%);
 }
 
 .hero-image-area {
@@ -266,7 +266,7 @@ header {
 }
 
 .info-val {
-    font-size: 28px;
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
     font-weight: 800;
     line-height: 1.15;
 }
@@ -336,16 +336,16 @@ header {
 }
 
 .left-card h2, .middle-card h2, .what-you-do-card h2 {
-    font-size: 60px;
+    font-size: clamp(1.625rem, 4.5vw, 3.75rem);
     font-weight: 800;
     margin-bottom: 20px;
     color: #2b1a10;
 }
 
 .left-card p, .middle-card p {
-    font-size: 22px;
+    font-size: clamp(0.875rem, 1.5vw, 1.375rem);
     line-height: 1.6;
-    max-width: 70%;
+    max-width: min(70%, 100%);
     font-weight: 500;
 }
 
@@ -418,13 +418,13 @@ header {
 }
 
 .right-card h2 {
-    font-size: 50px;
+    font-size: clamp(1.75rem, 3.5vw, 3.125rem);
     font-weight: 800;
     margin-bottom: 15px;
 }
 
 .small-info {
-    font-size: 20px;
+    font-size: clamp(0.875rem, 1.4vw, 1.25rem);
     font-weight: 700;
     margin-bottom: 30px;
     line-height: 1.5;
@@ -434,11 +434,11 @@ header {
     display: inline-block;
     background-color: #2b1a10;
     color: #fff;
-    padding: 20px 40px;
+    padding: clamp(0.875rem, 1.5vw, 1.25rem) clamp(1.75rem, 3vw, 2.5rem);
     border-radius: 50px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 22px;
+    font-size: clamp(1rem, 1.5vw, 1.375rem);
     align-self: flex-start;
 }
 
@@ -487,7 +487,7 @@ footer {
 }
 
 .gallery-card h2 {
-    font-size: 60px;
+    font-size: clamp(1.625rem, 4.5vw, 3.75rem);
     font-weight: 800;
     margin-bottom: 10px;
     color: #2b1a10;
@@ -636,7 +636,7 @@ footer {
 
 .faq-title {
     font-family: 'Fredoka', sans-serif;
-    font-size: 52px;
+    font-size: clamp(1.75rem, 4vw, 3.25rem);
     font-weight: 700;
     line-height: 1.05;
     color: #2b1a10;
@@ -1303,14 +1303,6 @@ html {
         padding: 20px 24px;
     }
 
-    .title-boba,
-    .title-bash {
-        font-size: 100px;
-    }
-
-    .title-tirupati {
-        font-size: 55px;
-    }
 
     .hero {
         padding: 45px;
@@ -1320,26 +1312,13 @@ html {
         max-width: 70%;
     }
 
-    .hero-desc {
-        font-size: 18px;
-    }
 
     .bottom-card {
         padding: 50px;
         min-height: 300px;
     }
 
-    .left-card h2,
-    .middle-card h2,
-    .what-you-do-card h2 {
-        font-size: 44px;
-    }
 
-    .left-card p,
-    .middle-card p {
-        font-size: 18px;
-        max-width: 85%;
-    }
 
     .raccoon-img {
         width: 320px;
@@ -1358,17 +1337,6 @@ html {
         gap: 20px;
     }
 
-    .right-card h2 {
-        font-size: 40px;
-    }
-
-    .gallery-card h2 {
-        font-size: 44px;
-    }
-
-    .gallery-subtitle {
-        font-size: 18px;
-    }
 
     .gallery-item-tall {
         min-height: 340px;
@@ -1379,9 +1347,6 @@ html {
         padding: 40px 40px 20px;
     }
 
-    .faq-title {
-        font-size: 42px;
-    }
 
     .faq-grid {
         padding: 10px 40px 30px;
@@ -1407,18 +1372,11 @@ html {
         margin-bottom: 20px;
     }
 
-    .logo {
-        font-size: 28px;
-    }
 
     .logo-icon {
         width: 26px;
     }
 
-    .badge-yellow {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
 
     /* Hero */
     .hero {
@@ -1432,12 +1390,7 @@ html {
 
     .title-boba,
     .title-bash {
-        font-size: 72px;
         letter-spacing: -1px;
-    }
-
-    .title-tirupati {
-        font-size: 40px;
     }
 
     .pill-badge {
@@ -1451,14 +1404,7 @@ html {
         margin-right: 8px;
     }
 
-    .hero-desc {
-        font-size: 16px;
-        max-width: 100%;
-    }
 
-    .hero-desc br {
-        display: none;
-    }
 
     /* Info Cards — stack vertically */
     .info-cards {
@@ -1480,9 +1426,6 @@ html {
         height: 26px;
     }
 
-    .info-val {
-        font-size: 22px;
-    }
 
     /* Bottom Cards */
     .bottom-card {
@@ -1493,13 +1436,11 @@ html {
     .left-card h2,
     .middle-card h2,
     .what-you-do-card h2 {
-        font-size: 32px;
         margin-bottom: 14px;
     }
 
     .left-card p,
     .middle-card p {
-        font-size: 16px;
         max-width: 100%;
     }
 
@@ -1559,19 +1500,6 @@ html {
         font-size: 14px;
     }
 
-    /* CTA card */
-    .right-card h2 {
-        font-size: 34px;
-    }
-
-    .small-info {
-        font-size: 16px;
-    }
-
-    .join-btn {
-        padding: 16px 32px;
-        font-size: 18px;
-    }
 
     /* Footer */
     footer {
@@ -1610,15 +1538,6 @@ html {
         transform: translateY(-3px) scale(1.02);
     }
 
-    /* Gallery */
-    .gallery-card h2 {
-        font-size: 32px;
-    }
-
-    .gallery-subtitle {
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
 
     .gallery-grid {
         grid-template-columns: 1fr;
@@ -1660,13 +1579,6 @@ html {
         padding: 6px 12px;
     }
 
-    .faq-title {
-        font-size: 34px;
-    }
-
-    .faq-subtitle {
-        font-size: 15px;
-    }
 
     .faq-subtitle br {
         display: none;
@@ -1725,42 +1637,9 @@ html {
         padding: 6px 14px;
     }
 
-    /* Hero */
     .hero {
         padding: 24px 18px;
         border-radius: 14px;
-    }
-
-    .title-boba,
-    .title-bash {
-        font-size: 52px;
-        text-shadow:
-            -2px -2px 0 #382314,
-             2px -2px 0 #382314,
-            -2px  2px 0 #382314,
-             2px  2px 0 #382314,
-             0px  2px 0 #382314,
-             2px  0px 0 #382314,
-            -2px  0px 0 #382314,
-             0px -2px 0 #382314;
-    }
-
-    .title-boba {
-        text-shadow: none;
-    }
-
-    .title-tirupati {
-        font-size: 30px;
-    }
-
-    .hero-desc {
-        font-size: 14px;
-        line-height: 1.6;
-    }
-
-    .pill-badge {
-        font-size: 10px;
-        padding: 5px 12px;
     }
 
     /* Info Cards */
@@ -1780,13 +1659,6 @@ html {
         height: 22px;
     }
 
-    .info-label {
-        font-size: 13px;
-    }
-
-    .info-val {
-        font-size: 20px;
-    }
 
     /* Bottom Cards */
     .bottom-card {
@@ -1794,16 +1666,6 @@ html {
         border-radius: 12px;
     }
 
-    .left-card h2,
-    .middle-card h2,
-    .what-you-do-card h2 {
-        font-size: 26px;
-    }
-
-    .left-card p,
-    .middle-card p {
-        font-size: 14px;
-    }
 
     .raccoon-img {
         width: 150px;
@@ -1822,30 +1684,6 @@ html {
         height: 90px;
     }
 
-    .step-text h3 {
-        font-size: 18px;
-    }
-
-    .step-text p {
-        font-size: 13px;
-    }
-
-    /* CTA */
-    .right-card h2 {
-        font-size: 28px;
-    }
-
-    .small-info {
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-
-    .join-btn {
-        padding: 14px 28px;
-        font-size: 16px;
-        width: 100%;
-        text-align: center;
-    }
 
     /* Footer */
     .footer-text {
@@ -1863,15 +1701,6 @@ html {
         display: none;
     }
 
-    /* Gallery */
-    .gallery-card h2 {
-        font-size: 26px;
-    }
-
-    .gallery-subtitle {
-        font-size: 14px;
-        margin-bottom: 16px;
-    }
 
     .gallery-item-wide:first-child,
     .gallery-item-tall,
@@ -1888,13 +1717,6 @@ html {
         padding: 24px 18px 16px;
     }
 
-    .faq-title {
-        font-size: 28px;
-    }
-
-    .faq-subtitle {
-        font-size: 13px;
-    }
 
     .faq-grid {
         padding: 8px 18px 24px;
@@ -1916,15 +1738,6 @@ html {
         height: 16px;
     }
 
-    .faq-question {
-        font-size: 13px;
-    }
-
-    .faq-toggle {
-        width: 24px;
-        height: 24px;
-        font-size: 18px;
-    }
 
     .faq-answer {
         padding: 0 14px 0 46px;
@@ -1934,9 +1747,6 @@ html {
         padding: 0 14px 14px 46px;
     }
 
-    .faq-answer p {
-        font-size: 13px;
-    }
 
     .faq-bottom-banner {
         margin: 0 18px 24px;
