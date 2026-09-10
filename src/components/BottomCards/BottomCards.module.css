@@ -1,0 +1,325 @@
+/* Bottom Cards */
+.bottomCards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.bottomCard {
+    border-radius: 15px;
+    padding: clamp(1.75rem, 5vw, 5rem);
+    min-height: clamp(200px, 30vw, 400px);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.45s ease;
+}
+
+.bottomCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(43, 26, 16, 0.12);
+}
+
+/* Left Card — "Bring your people" */
+.leftCard {
+    flex: 1.5;
+}
+
+.leftCard::before {
+    content: '';
+    position: absolute;
+    top: -25px; left: -25px; right: -25px; bottom: -25px;
+    background-image: url('../../assets/contentcard.jpeg');
+    background-size: cover;
+    background-position: center right;
+    z-index: -1;
+}
+
+/* Middle Card — "What is Boba Bash?" */
+.middleCardContainer {
+    position: relative;
+    width: min(85%, 100%);
+    align-self: flex-start;
+}
+
+.middleCard::before {
+    content: '';
+    position: absolute;
+    top: -25px; left: -25px; right: -25px; bottom: -25px;
+    background-image: url('../../assets/what is boba bash.jpeg');
+    background-size: cover;
+    background-position: center right;
+    z-index: -1;
+}
+
+.raccoonImg {
+    position: absolute;
+    bottom: -25px;
+    right: clamp(-120px, -10vw, -200px);
+    width: clamp(150px, 30vw, 450px);
+    max-width: 50%;
+    z-index: 10;
+    transform: rotate(2deg);
+    animation: raccoonBob 3s ease-in-out infinite;
+}
+
+/* Card headings */
+.cardTitle {
+    font-size: clamp(1.625rem, 4.5vw, 3.75rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #2b1a10;
+}
+
+.cardDesc {
+    font-size: clamp(0.875rem, 1.5vw, 1.375rem);
+    line-height: 1.6;
+    max-width: min(70%, 100%);
+    font-weight: 500;
+}
+
+/* What you do at Boba Bash card */
+.whatYouDoCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.whatYouDoCard::before {
+    content: '';
+    position: absolute;
+    top: -25px; left: -25px; right: -25px; bottom: -25px;
+    background-image: url('../../assets/what you do at boba bash.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* Steps */
+.stepsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 30px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.step {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step:hover .stepImg {
+    animation: gentlePulse 0.5s ease-in-out;
+}
+
+.stepImg {
+    height: clamp(5rem, 12vw, 11.25rem);
+    width: auto;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.stepImg3 {
+    transform: scale(1.35);
+    transform-origin: center;
+}
+
+.stepText h3 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #2b1a10;
+}
+
+.stepText p {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #2b1a10;
+    margin: 0;
+}
+
+.stepDivider {
+    width: 1px;
+    border-left: 2px dotted rgba(43, 26, 16, 0.4);
+    align-self: stretch;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s;
+}
+
+.stepDivider.visible {
+    transform: scaleY(1);
+}
+
+/* Right Card — "Ready to bash?" */
+.rightCard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rightCard::before {
+    content: '';
+    position: absolute;
+    top: -25px; left: -25px; right: -25px; bottom: -25px;
+    background-image: url('../../assets/bash now card.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.rightCardTitle {
+    font-size: clamp(1.75rem, 3.5vw, 3.125rem);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.smallInfo {
+    font-size: clamp(0.875rem, 1.4vw, 1.25rem);
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.joinBtn {
+    display: inline-block;
+    background-color: #2b1a10;
+    color: #fff;
+    padding: clamp(0.875rem, 1.5vw, 1.25rem) clamp(1.75rem, 3vw, 2.5rem);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: clamp(1rem, 1.5vw, 1.375rem);
+    align-self: flex-start;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.35s ease,
+                background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.joinBtn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 206, 84, 0.25);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.joinBtn:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 12px 35px rgba(43, 26, 16, 0.25),
+                0 0 20px rgba(255, 206, 84, 0.3);
+    background-color: #3d2518;
+}
+
+.joinBtn:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+.joinBtn:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 4px 15px rgba(43, 26, 16, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .stepImg3 {
+        transform: scale(1.2);
+    }
+
+    .stepsContainer {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bottomCard {
+        min-height: auto;
+    }
+
+    .cardTitle {
+        margin-bottom: 14px;
+    }
+
+    .cardDesc {
+        max-width: 100%;
+    }
+
+    .stepsContainer {
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 24px;
+    }
+
+    .stepImg {
+        height: 100px;
+    }
+
+    .stepImg3 {
+        transform: scale(1.1);
+    }
+
+    .stepDivider {
+        width: 80%;
+        height: 1px;
+        border-left: none;
+        border-top: 2px dotted rgba(43, 26, 16, 0.4);
+        align-self: center;
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    .stepDivider.visible {
+        transform: scaleX(1);
+    }
+
+    .stepText h3 {
+        font-size: 20px;
+    }
+
+    .stepText p {
+        font-size: 14px;
+    }
+
+    .bottomCard:hover {
+        transform: translateY(-3px);
+    }
+
+    .joinBtn:hover {
+        transform: translateY(-3px) scale(1.02);
+    }
+}
+
+@media (max-width: 480px) {
+    .bottomCard {
+        border-radius: 12px;
+    }
+
+    .step {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}

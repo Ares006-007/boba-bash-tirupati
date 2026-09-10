@@ -1,0 +1,33 @@
+.floatingBobaContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.floatingCup {
+    position: absolute;
+    bottom: -80px;
+    width: 40px;
+    height: auto;
+    opacity: 0;
+    animation: floatingCup linear infinite;
+    filter: blur(1px) saturate(0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .floatingCup {
+        width: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .floatingBobaContainer {
+        display: none;
+    }
+}
