@@ -18,7 +18,7 @@ export default function BottomCards() {
       <div className={`${styles.bottomCard} ${styles.leftCard} reveal`} ref={leftRef}>
         <h2 className={styles.cardTitle}>Bring your people.</h2>
         <p className={styles.cardDesc}>
-          Boba Bash Tirupati is happening on <strong>21 September 2026</strong> at{' '}
+          Boba Bash Tirupati is happening on <strong>TBA</strong> at{' '}
           <strong>Mohan Babu University</strong>. Come hang out, meet new people and
           experience a celebration built around everyone&rsquo;s favourite little cup of
           happiness.
@@ -111,7 +111,7 @@ export default function BottomCards() {
       >
         <h2 className={styles.rightCardTitle}>Ready to bash?</h2>
         <p className={styles.smallInfo}>
-          Tirupati &bull; 21 September 2026 &bull; Mohan Babu University
+          Tirupati &bull; TBA &bull; Mohan Babu University
         </p>
         <a
           href="https://bash.hackclub.com/events/tirupati"

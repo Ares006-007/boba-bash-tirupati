@@ -50,7 +50,7 @@ export default function InfoCards() {
         <div className={styles.infoText}>
           <div className={styles.infoLabel}>WHEN</div>
           <div className={styles.infoVal}>
-            21 September<br />2026
+            TBA
           </div>
         </div>
       </div>

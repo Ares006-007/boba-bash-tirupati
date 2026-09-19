@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './Gallery.module.css';
 import useScrollReveal from '../../hooks/useScrollReveal';
 import mock2 from '../../assets/mock (2).webp';
